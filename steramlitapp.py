@@ -31,7 +31,7 @@ def animation(word):
     # # join and write 
     # print('video',video)
     result = concatenate_videoclips(video)
-    result.write_videofile('combined.mp4',20)
+    result.write_videofile('combined.mp4',30)
 
 def damerau_levenshtein_distance(str1, str2):
     return damerauLevenshtein(str1, str2,similarity=False)
