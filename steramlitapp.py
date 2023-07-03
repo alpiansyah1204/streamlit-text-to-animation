@@ -8,9 +8,9 @@ imbuhan = ['ter', 'te', 'se', 'per', 'peng',
                'pen', 'pem', 'pe', 'men', 'mem', 
                'me', 'ke', 'di', 'ber', 'be']
 list_animation = ["me","masak","apa","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
-df = pd.read_csv('data\kbbi.txt',header=None, names=['kata'])
+df = pd.read_csv('data/kbbi.txt',header=None, names=['kata'])
 df = df.dropna()
-df_akronim = pd.read_csv('data\persamaan.csv')
+df_akronim = pd.read_csv('data/persamaan.csv')
 
 
 def hapus_angka(string_input):
@@ -27,7 +27,7 @@ def hapus_tanda_baca(string_input):
     return string_tanpa_tanda_baca
 
 def animation(word):
-    video = [ VideoFileClip(fr'video\{i}.mp4') for i in word]
+    video = [ VideoFileClip(fr'video/{i}.mp4') for i in word]
     # # join and write 
     # print('video',video)
     result = concatenate_videoclips(video)
